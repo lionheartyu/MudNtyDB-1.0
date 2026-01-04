@@ -6,10 +6,23 @@
 - **ntyco**: 端口 `9096`
 - **muduo**: 端口 `8080`
 
+## 环境要求
+
+- **操作系统**：建议使用 Ubuntu 20.04 及以上版本
+- **依赖库**：
+  - `liburing`（用于 io_uring 支持）
+  - `g++`、`make`、`cmake` 等常用开发工具
+  - 其他依赖库会在自动化脚本中自动安装
+
 ## 快速开始
 
 1. **环境准备**  
-   安装liburing库,sudo apt-get install liburing-dev
+   首先确保您的系统为 Ubuntu 20.04 或更高版本。  
+   安装必要依赖库（如未安装）：
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y liburing-dev build-essential cmake git
+   ```
    在 `Kmuduo` 目录下执行以下命令，一键部署并编译所需环境：
    ```bash
    ./autobuild.sh
